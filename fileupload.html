@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" xmlns="http://www.w3.org/1999/html">
+<!-- BEGIN HEAD -->
+<head>
+  <meta charset="utf-8" />
+  <title>Ads-We Digital Signage Ads Solution</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="" name="description" />
+  <meta content="" name="author" />
+
+  <!-- GLOBAL MANDATORY STYLES -->
+  <link href="http://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet" type="text/css">
+  <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css" />
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- PAGE LEVEL PLUGIN STYLES -->
+  <link href="css/animate.css" rel="stylesheet">
+  <link href="vendor/swiper/css/swiper.min.css" rel="stylesheet" type="text/css" />
+  <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css" />
+
+  <!-- THEME STYLES -->
+  <link href="css/layout.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="favicon.ico" />
+
+  <!-- Filestack -->
+  <script src="https://static.filestackapi.com/v3/filestack.js"></script>
+<!-- END HEAD -->
+
+<!-- BODY -->
+<body>
+<br>
+  <!--========== HEADER ==========-->
+      <div class="container">
+          <div class="row text-center margin-b-40">
+              <div class="col-sm-12">
+                  <img src="img/logo.png" height="88" width="130"/></div>
+          </div>
+      </div>
+
+  <!-- About -->
+  <div>
+    <div class="container">
+      <div class="row text-center margin-b-40">
+        <div class="col-sm-12">
+          <h2>Digital Ads File Upload</h2>
+        </div>
+      </div>
+        <div class="row">
+            <div class="col-sm-4 sm-margin-b-50">
+                <h3>File Specification:</h3>
+            </div>
+            <div class="col-sm-4 sm-margin-b-50">
+                <h3>Restrictions:</h3>
+                <h3>Delivery:</h3>
+            </div>
+        </div>
+    </div>
+  </div>
+  <!-- End About -->
+  <!--========== END PAGE LAYOUT ==========-->
+
+  <!--========== FOOTER ==========-->
+  <footer class="footer">
+    <!-- Copyright -->
+    <div class="content container">
+      <div class="row" align="center">
+        <div class="col-xs-12">
+          <a href="https://www.facebook.com/adswedigital" target="_blank"><img src="img/fb.png" height="64" width="64"/></a>
+            <a href="https://www.linkedin.com/company/ads-we" target="_blank"><img src="img/ln.png" height="64" width="64"/></a>
+      </div>
+      </div>
+        <br>
+      <div class="row" align="center">
+        <div class="col-xs-12">
+          <p class="margin-b-0">Ads-We &copy;
+            <script type="text/javascript">
+                document.write(new Date().getFullYear());
+            </script></p>
+        </div>
+      </div>
+      <!--// end row -->
+    </div>
+
+    <!-- End Copyright -->
+  </footer>
+  <!--========== END FOOTER ==========-->
+
+
+  <!-- FILESTACK -->
+<script type="text/javascript">
+      const client = filestack.init('AWCt1r5BFQBefF0gFsigxz');
+      // Make sure to include your API key above. If you do not have any API key, you can get one here: https://dev.filestack.com/register/free
+      client.pick();
+      const link = document.getElementById('url');
+
+      //const client = filestack.init('YOUR API KEY');
+
+      client.pick({
+          accept: 'image/*',
+      }).then(function(result) {
+          const fileUrl = result.filesUploaded[0].url;
+          link.href=fileUrl;
+          link.innerHTML=fileUrl;
+      });
+  </script>
+</body>
+<!-- END BODY -->
+
+</html>
